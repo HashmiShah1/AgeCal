@@ -10,17 +10,22 @@
     background: linear-gradient(165deg, #4203a9, #90bafc);
     color: #fff;
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .calculator {
     width: 100%;
     max-width: 600px;
-    margin-left: 10%;
-    margin-top: 10%;
+    margin-top: 5%;
+    text-align: center;
 }
 
 .calculator h1 {
     font-size: 4rem;
+    margin-bottom: 20px;
 }
 
 .calculator h1 span {
@@ -34,32 +39,18 @@
     background: rgba(255, 255, 255, 0.3);
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
 .input-box input {
     flex: 1;
-    margin-right: 20px;
+    margin-bottom: 20px;
     padding: 14px 20px;
     border: 0;
     outline: 0;
     font-size: 18px;
     border-radius: 5px;
     position: relative;
-}
-
-
-.input-box input::-webkit-calendar-picker-indicator {
-    /*Date wali jgha me kahin b click krain to calender open ho jai ga*/
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: auto;
-    height: auto;
-    position: absolute;
-    background-position: calc(100% - 10px);
-    background-size: 30px;
-    cursor: pointer;
 }
 
 .input-box button {
@@ -73,10 +64,57 @@
     cursor: pointer;
 }
 
-#result{
+#result {
     font-size: 2rem;
 }
 
-#result span{
+#result span {
     color: #ffff76;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .calculator {
+        max-width: 90%;
+    }
+
+    .calculator h1 {
+        font-size: 3rem;
+    }
+
+    .input-box {
+        padding: 20px;
+    }
+
+    .input-box input, .input-box button {
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+
+    #result {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        margin-top: 10%;
+    }
+
+    .calculator h1 {
+        font-size: 2.5rem;
+    }
+
+    .input-box {
+        padding: 15px;
+    }
+
+    .input-box input, .input-box button {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    #result {
+        font-size: 1.2rem;
+    }
 }
